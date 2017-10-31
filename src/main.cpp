@@ -1,7 +1,5 @@
 #include <Arduino.h>
 
-#include <Arduino.h>
-
 int IN_PIN = 34;
 int OUT_PIN = 2;
 
@@ -25,7 +23,7 @@ int val = analogRead(IN_PIN);
 
 if (iterator>=99) {
   iterator = 0;
-  //Serial.println(arrayValue[0]);
+  Serial.println(arrayValue[0]);
 }
 
 arrayValue[iterator] = val;
