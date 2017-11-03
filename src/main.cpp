@@ -54,18 +54,9 @@ void setup() {
                     0,          /* Priority of the task */
                     NULL,       /* Task handle. */
                     0);  /* Core where the task should run */
-
-  xTaskCreatePinnedToCore(
-                    secondCoreTask,   /* Function to implement the task */
-                    "secondCoreTask", /* Name of the task */
-                    10000,      /* Stack size in words */
-                    NULL,       /* Task input parameter */
-                    0,          /* Priority of the task */
-                    NULL,       /* Task handle. */
-                    1);  /* Core where the task should run */
-
-
 }
 
 void loop() {
+  dacWrite(OUT_SIN_PIN, random(0, 255));
+  delay(1);
 }
